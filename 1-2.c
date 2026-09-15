@@ -14,7 +14,8 @@ double B( const double a, const double n);
  * @return значение 0, если программа выполнена корректно
  */
 int main() {
-  double a(), n();
+  double a();
+  double n();
 
   printf("Введите значение первой стороны: ");
   scanf("%lf", &a);
