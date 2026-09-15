@@ -19,7 +19,8 @@ double E(const double m, const double v);
  *@return значение 0, если программа выполнена корректно
  */
 int main(){
-    double m(), v();
+    double m();
+    double v();
     printf("Введите значение массы(кг) пули: ");
     scanf("%lf", &m);
 
