@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-/
+/**
  * @brief рассчивает прееменную b
  * @param a - первая сторона прямоугольника
  * @param n - коэффициент
@@ -9,7 +9,7 @@
  */
 double B( const double a, const double n);
 
-/
+/**
  * @brief точка входа в программу
  * @return значение 0, если программа выполнена корректно
  */
