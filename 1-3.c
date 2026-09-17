@@ -33,5 +33,5 @@ int main(){
 }
 
 double E(const double m, const double v){
-    return (m+pow(v,2))/2;
+    return (m*pow(v,2))/2;
 }
