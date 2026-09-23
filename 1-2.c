@@ -54,9 +54,10 @@ int main() {
     Checkparam(kef);
 
     kef /= 100;
+    side2 = Side2(side1, kef)
 
-    printf("Площадь прямоугольника = %lf\n", Area(side1, Side2(side1, kef)));
-    printf("Периметр прямоугольника = %lf\n", Perimetr(side1, Side2(side1, kef)));
+    printf("Площадь прямоугольника = %lf\n", Area(side1, side2));
+    printf("Периметр прямоугольника = %lf\n", Perimetr(side1, side2));
 
     return 0;
 }
