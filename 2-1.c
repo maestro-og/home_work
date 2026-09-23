@@ -3,19 +3,19 @@
 #include <stdlib.h>
 #include <math.h>
 #include <locale.h>
-/
+/**
  * @brief считывает число + проверка на корректность ввода
  * @return возвращает число пользователя , иначе выводит ошибку
  */
 double GETvalue();
 
-/
+/**
  * @brief проверяет значение на положительность
  * @param value - проверяемое значение
  */
 void Checkparam(const double value);
 
-/
+/**
  * @brief выдает нам вычисления в зависимости от выбора пользователя
  * @param choose - значение от которого зависит формула
  * @param radius - радиус заданный пользователем
@@ -23,7 +23,7 @@ void Checkparam(const double value);
  */
 double Choose(const short choose, const double radius);
 
-/
+/**
  *@brief входная точка
  *@return значение 0, если программа выполнена корректно
  */
