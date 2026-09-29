@@ -68,7 +68,7 @@ double Choose(const double x, const double a){
   if (x > a){
     return y_bigger(x,a);
   }
-  else{
-    return y_smaller(x,a);
-  }
+  
+  return y_smaller(x,a);
+  
 }
