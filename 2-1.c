@@ -43,7 +43,7 @@ int main(){
 
 double GETvalue(){
     double value = 0;
-    if(!scanf("%lf", &value)){
+    if(scanf("%lf", &value) != 1){
         printf("Error\n");
         exit(1);
     }
