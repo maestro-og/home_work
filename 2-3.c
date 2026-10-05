@@ -26,6 +26,7 @@ int main(){
   int a = GETnum();
   printf("Введите значение пременной b: ");
   int b = GETnum();
+  printf("Ваше число ");
   Check(a,b);
 
   return 0;
@@ -42,8 +43,8 @@ int GETnum(){
 
 void Check(const int a, const int b){
   if ((a + b) % 2 != 0){
-    printf("НЕ ЦЕЛОЕ");
+    printf("не целое");
     exit(1);
   }
-  printf("ЦЕЛОЕ");
+  printf("целое");
 }
