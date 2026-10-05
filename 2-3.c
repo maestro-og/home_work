@@ -26,7 +26,7 @@ int main(){
   int a = GETnum();
   printf("Введите значение пременной b: ");
   int b = GETnum();
-  printf("Ваше число ");
+  printf("Среднее арефметическое : ");
   Check(a,b);
 
   return 0;
