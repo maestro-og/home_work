@@ -27,10 +27,7 @@ int main(){
   printf("Введите значение пременной b: ");
   int b = GETnum();
   Check(a,b);
-  int medium = (a+b) / 2;
-  printf("Среднее арефметическое : %d", medium);
   
-
   return 0;
 }
 
@@ -48,4 +45,5 @@ void Check(const int a, const int b){
     printf("не целое");
     exit(1);
   }
+  printf("целое");
 }
