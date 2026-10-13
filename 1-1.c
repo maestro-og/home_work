@@ -32,7 +32,7 @@ int main() {
 }
 
 double GETA(const double x, const double y) {
-  return (2 * cos(x - (6 / M_PI))) / (0.5 + pow(sin(y), 2));
+  return (2 * cos(x - ( M_PI / 6 ))) / (0.5 + pow(sin(y), 2));
 }
 
 double GETB(const double z) {
