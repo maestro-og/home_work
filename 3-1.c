@@ -3,6 +3,11 @@
 #include <float.h>
 #include <math.h>
 
+/**
+ * @brief считывает число + проверка на корректность ввода
+ * @return возвращает число пользователя , иначе выводит ошибку
+ */
+double GETnum();
 
 /**
  * @brief вычиляет ординату
@@ -17,7 +22,7 @@ double y(const double x);
  * @param x_end - конечная абсцисы
  * @param x_step - расстояние между соседними абсцисами
  */
-void Check_cikl(const double x_start, const double x_end, const double x_step);
+void Check_param(const double x_start, const double x_end, const double x_step);
 
 /**
  * @brief цикл
@@ -26,19 +31,7 @@ void Check_cikl(const double x_start, const double x_end, const double x_step);
  * @param x_step - расстояние между соседними абсцисами
  * @return - возвращает координаты (x,y)
  */
-void CIKL(const double x_start, const double x_end, const double x_step);
-
-/**
- * @brief считывает число + проверка на корректность ввода
- * @return возвращает число пользователя , иначе выводит ошибку
- */
-double GETnum();
-
-/**
- * @brief проверяет значение на неотрицательность
- * @param value - проверяемое значение
- */
-void Check(const double num);
+void Tabulation(const double x_start, const double x_end, const double x_step);
 
 /**
  * @brief точка входа в программу
@@ -47,13 +40,15 @@ void Check(const double num);
 int main() {
   printf("Point start: ");
   const double x_start = GETnum();
-  Check(x_start);
+
   printf("Point end: ");
   const double x_end = GETnum();
-  Check(x_end);
+
   printf("Step: ");
   const double x_step = GETnum();
-  CIKL(x_start,x_end,x_step);
+
+  Check_param(x_start,x_end,x_step);
+  Tabulation(x_start,x_end,x_step);
 
   return 0;
 
@@ -63,16 +58,15 @@ double y(const double x) {
     return 3 * sin(sqrt(x)) + 0.39 * x - 3.8;
 }
 
-void Check_cikl(const double x_start, const double x_end, const double x_step){
+void Check_param(const double x_start, const double x_end, const double x_step){
   if (x_step <= 0 || x_start > x_end){
     printf("Error\n");
     exit(1);
   }
 }
 
-void CIKL(const double x_start, const double x_end, const double x_step) {
-  Check_cikl(x_start,x_end,x_step);
-  for (double x = x_start ; x <= x_end; x += x_step - DBL_EPSILON) {
+void Tabulation(const double x_start, const double x_end, const double x_step) {
+  for (double x = x_start ; x <= x_end + DBL_EPSILON; x += x_step) {
         printf("x = %.3f  y = %.4f\n", x, y(x));
     }
 }
@@ -86,9 +80,3 @@ double GETnum(){
   return num;
 }
 
-void Check(const double num){
-  if (num < 0){
-    printf("It must be non-negative\n");
-    exit(1);
-  }
-}
