@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <float.h>
 #include <math.h>
 
 /**
@@ -66,7 +65,7 @@ void Check_param(const double x_start, const double x_end, const double x_step){
 }
 
 void Tabulation(const double x_start, const double x_end, const double x_step) {
-  for (double x = x_start ; x <= x_end + DBL_EPSILON; x += x_step) {
+  for (double x = x_start ; x <= x_end + (x_step / 2); x += x_step) {
         printf("x = %.3f  y = %.4f\n", x, y(x));
     }
 }
