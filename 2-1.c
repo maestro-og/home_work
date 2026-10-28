@@ -8,7 +8,7 @@
  * @brief считывает число + проверка на корректность ввода
  * @return возвращает число пользователя, иначе выводит ошибку
  */
-double GETvalue();
+double GETvalue(const char *string);
 
 /**
  * @brief проверяет значение на положительность
@@ -45,22 +45,22 @@ double Choose(const short choose, const double radius);
 int main() {
     setlocale(LC_ALL, "Russian");
 
-    printf("Введи значение радиуса: ");
-    const double radius = GETvalue();
+    const double radius = GETvalue("Введи значение радиуса: ");
     Checkparam(radius);
 
-    printf("Выбери что хочешь вычислить\n"
+    const short choose = (short)GETvalue("Выбери что хочешь вычислить\n"
            "Введите '1' чтобы вычислить Объем шара\n"
            "Введите '2' чтобы вычислить Площадь поверхности шара\n");
-    const short choose = (short)GETvalue();
 
     printf("%lf\n", Choose(choose, radius));
 
     return 0;
 }
 
-double GETvalue() {
+double GETvalue(const char *string) {
+    printf("%s",string);
     double value = 0;
+    
     if (scanf("%lf", &value) != 1) {
         printf("Error\n");
         exit(1);
@@ -86,12 +86,15 @@ double Area(const double radius) {
 double Choose(const short choose, const double radius) {
     if (choose == 1) {
         printf("Объем шара = ");
+        
         return Volume(radius);
     }
+    
     if (choose == 2) {
         printf("Площадь поверхности шара = ");
         return Area(radius);
     }
+    
     printf("Ввели некорректное значение\n");
     exit(1);
 }
