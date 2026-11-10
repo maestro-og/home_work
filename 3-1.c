@@ -70,7 +70,9 @@ void Tabulation(const double x_start, const double x_end, const double x_step) {
 }
 
 double GETnum( const char *string) {
-  printf("%s",string);
+  if (string != NULL){
+    printf("%s",string);
+  }
   double num = 0.0;
   if (scanf("%lf", &num) != 1) {
     printf("Error\n");
