@@ -1,4 +1,4 @@
-#define _USE_MATH_DEFINES
+#define _USE_MATH_DEFINE
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -6,6 +6,7 @@
 
 /**
  * @brief считывает число + проверка на корректность ввода
+ * @param string - приглашение к вводу
  * @return возвращает число пользователя, иначе выводит ошибку
  */
 double GETvalue(const char *string);
@@ -58,9 +59,11 @@ int main() {
 }
 
 double GETvalue(const char *string) {
-    printf("%s",string);
+    if (string != NULL) {
+        printf("%s", string);
+    }
     double value = 0;
-    
+
     if (scanf("%lf", &value) != 1) {
         printf("Error\n");
         exit(1);
@@ -86,15 +89,15 @@ double Area(const double radius) {
 double Choose(const short choose, const double radius) {
     if (choose == 1) {
         printf("Объем шара = ");
-        
+
         return Volume(radius);
     }
-    
+
     if (choose == 2) {
         printf("Площадь поверхности шара = ");
         return Area(radius);
     }
-    
+
     printf("Ввели некорректное значение\n");
     exit(1);
 }
