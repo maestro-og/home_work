@@ -10,7 +10,7 @@
 ### Модуль 2
 * :white_check_mark: **Задание 2-1** — [Условие (Issue #8)](https://github.com/maestro-og/home_work/issues/8) | [Перейти к коду (ветка 2-1)](https://github.com/maestro-og/home_work/tree/2-1)
 * :white_check_mark: **Задание 2-2** — [Условие (Issue #11)](https://github.com/maestro-og/home_work/issues/11) | [Перейти к коду (ветка 2-2)](https://github.com/maestro-og/home_work/tree/2-2)
-* :white_large_square: **Задание 2-3** — [Условие (Issue #12)](https://github.com/maestro-og/home_work/issues/12) | [Перейти к коду (ветка 2-3)](https://github.com/maestro-og/home_work/tree/2-3)
+* ✅: **Задание 2-3** — [Условие (Issue #12)](https://github.com/maestro-og/home_work/issues/12) | [Перейти к коду (ветка 2-3)](https://github.com/maestro-og/home_work/tree/2-3)
 
 ### Модуль 3
 * :white_large_square: **Задание 3-1** — [Условие (Issue #14)](https://github.com/maestro-og/home_work/issues/14) | [Перейти к коду (ветка 3-1)](https://github.com/maestro-og/home_work/tree/3-1)
