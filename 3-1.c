@@ -42,7 +42,6 @@ int main() {
   const double x_end = GETnum("Point end: ");
   const double x_step = GETnum("Step: ");
 
-  Check_param(x_start, x_end, x_step);
   Tabulation(x_start, x_end, x_step);
 
   return 0;
@@ -64,6 +63,7 @@ void Check_param(const double x_start, const double x_end, const double x_step) 
 }
 
 void Tabulation(const double x_start, const double x_end, const double x_step) {
+  Check_param(x_start, x_end, x_step);
   for (double x = x_start; x <= x_end + (x_step / 2); x += x_step) {
     printf("x = %.3f  y = %.4f\n", x, y(x));
   }
