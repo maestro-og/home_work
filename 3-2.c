@@ -3,14 +3,57 @@
 #include <float.h>
 #include <math.h>
 
+/*
+- @brief считывает целое число с клавиатуры
+- @param message - приглашение ко вводу
+- @return введенное целое число
+*/
 int getInt(const char* message);
+
+/*
+- @brief считывает вещественное число с клавиатуры
+- @param message - приглашение ко вводу
+- @return введенное вещественное число
+*/
 double getValue(const char* message);
+
+/*
+- @brief проверяет, является ли количество элементов положительным
+- @param n - количество элементов ряда
+*/
 void checkPositive(const int n);
+
+/*
+- @brief проверяет, является ли точность положительной
+- @param e - заданная точность (эпсилон)
+*/
 void checkEpsilon(const double e);
+
+/*
+- @brief вычисляет сумму первых n членов ряда
+- @param n - количество членов ряда
+- @return сумма первых n членов ряда
+*/
 double sumN(const int n);
+
+/*
+- @brief вычисляет сумму членов ряда, по модулю не меньших заданного порога
+- @param e - порог точности (эпсилон)
+- @return сумма членов ряда с заданной точностью
+*/
 double sumE(const double e);
+
+/*
+- @brief вычисляет рекуррентный коэффициент для перехода к следующему члену ряда
+- @param i - индекс текущего шага
+- @return значение рекуррентного коэффициента
+*/
 double getCoef(const int i);
 
+/*
+- @brief точка входа в программу
+- @return возвращает 0, если программа выполнена корректно
+*/
 int main(){
     int n = getInt("Enter n: ");
     checkPositive(n);
@@ -59,11 +102,9 @@ void checkEpsilon(const double e){
     }
 }
 
-
 double getCoef(const int i){
     return -1.0 / ((i + 3.0) * (i + 4.0));
 }
-
 
 double sumN(const int n){
     double a = 1.0 / 12;
@@ -74,7 +115,6 @@ double sumN(const int n){
     }
     return result;
 }
-
 
 double sumE(const double e){
     double a = 1.0 / 12;
