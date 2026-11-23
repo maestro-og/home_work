@@ -14,4 +14,4 @@
 
 ### Модуль 3
 * :white_large_square: **Задание 3-1** — [Условие (Issue #14)](https://github.com/maestro-og/home_work/issues/14) | [Перейти к коду (ветка 3-1)](https://github.com/maestro-og/home_work/tree/3-1)
-* :white_large_square: **Задание 3-2** — [Условие (Issue #17)](https://github.com/maestro-og/home_work/issues/17) | [Перейти к коду (ветка 3-1)](https://github.com/maestro-og/home_work/tree/3-2)
+* :white_large_square: **Задание 3-2** — [Условие (Issue #17)](https://github.com/maestro-og/home_work/issues/17) | [Перейти к коду (ветка 3-2)](https://github.com/maestro-og/home_work/tree/3-2)
