@@ -5,21 +5,21 @@
 
 /*
 - @brief считывает целое число с клавиатуры
-- @param message - приглашение ко вводу
-- @return введенное целое число
+- @param message - приглашение к вводу
+- @return вывод целого числа 
 */
 int getInt(const char* message);
 
 /*
 - @brief считывает вещественное число с клавиатуры
 - @param message - приглашение ко вводу
-- @return введенное вещественное число
+- @return вывод целого числа 
 */
 double getValue(const char* message);
 
 /*
 - @brief проверяет, является ли количество элементов положительным
-- @param n - количество элементов ряда
+- @param n - количество элементов 
 */
 void checkPositive(const int n);
 
